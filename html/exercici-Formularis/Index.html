@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/action_page.php" method="get">
+        <h1>Dades Básiques</h1>
+        <label for="nom">Nom </label><input type="text" name="nom" required size="15"><br>
+        <label for="1ercognom">1er cognom </label><input type="text" name="1ercognom" value="Fica aquí el teu Cognom"
+            required>
+        <label for="2oncognom">2er cognom</label><input type="text" name="2oncognom" required><br>
+        <label for="tipus">Tipus de document:&nbsp;</label>
+        <select name="tipus" id="tipus" required>
+            <option value="DNI">DNI</option>
+            <option value="NIE">NIE</option>
+            <option value="Passaport">Passaport</option>
+        </select>
+        <label for="document">Document </label><input type="text" name="document"><br>
+
+        <label for="ets">Ets </label>
+        <input type="radio" id="dona" name="sexe" value="dona">
+        <label for="html">dona</label>
+        <input type="radio" id="home" name="sexe" value="home">
+        <label for="css">Home</label>
+        <input type="radio" id="otros" name="sexe" value="otros">
+        <label for="css">Otros</label><br>
+
+        <label for="naixement">Data de naixement:</label>
+        <input type="date" id="naixement" name="naixement" value="dd/mm/aaaa">
+        <br><br>
+
+        <h1>Dades Contacte</h1>
+        <label for="email">email </label><input type="text" name="email" required size="20">
+        <label for="telefon">telefon </label><input type="tel" name="telefon" required size="10"><br>
+
+        <label for="ets">vius a Barcelona? </label>
+        <input type="radio" id="si" name="si" checked>
+        <label for="html">Si</label>
+        <input type="radio" id="no" name="no">
+        <label for="css">No</label><br>
+
+        <label for="tipus">Tipus de Via:</label>
+        <input list="tipusvia" name="tipusvia">
+        <datalist id="tipusvia">
+            <option value="Carrer">
+            <option value="via">
+            <option value="Passeig">
+            <option value="Plaça">
+            <option value="rambla">
+            <option value="rambla">....
+        </datalist>
+
+        <h1>Tecnologies que t’agradaria saber</h1>
+        <input type="checkbox" name="HTML" value="HTML">
+        <label for="vehicle1"> HTML</label><br>
+        <input type="checkbox" name="CSS" value="CSS">
+        <label for="vehicle2"> CSS</label><br>
+        <input type="checkbox" name="js" value="js" checked>
+        <label for="vehicle3"> JAVASCRIPT</label><br><br>
+
+
+        <h1>El que més t’interessa aprendre.</h1>
+        <label for="html"><input type="radio" id="html" name="fav_language" value="HTML">HTML </label><br>
+        <label for="css"><input type="radio" id="css" name="fav_language" value="CSS" checked="checked">CSS</label><br>
+        <label for="javascript"><input type="radio" id="javascript" name="fav_language"
+                value="JavaScript">JavaScript</label><br><br>
+
+       
+        <h1>Observacions</h1>
+        <textarea id="w3review" name="w3review" rows="4" cols="50">
+          At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
+        </textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

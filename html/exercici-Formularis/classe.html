@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <form action="/action_page.php" method="get">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" maxlength="24" size="24" placeholder="Fica el teu nom" required><br><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname"><br><br>
+
+            <!-- radiobutton -->
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">HTML</label><br>
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css">CSS</label><br>
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+            <label for="css">CSS 2</label><br>
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript" checked>
+            <label for="javascript" >JavaScript</label><br><br>
+
+            <!-- checkbox -->
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> I have a bike</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2"> I have a car</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" checked>
+            <label for="vehicle3"> I have a boat</label><br>
+            <input type="checkbox" id="vehicle4" name="vehicle4" value="Boat" checked>
+            <label for="vehicle4"> I have a camion</label><br><br>
+
+            <!-- llistes -->
+            <label for="cars">Choose a car:</label>
+            <select id="cars" name="cars" multiple>
+                <option value="0" selected>selecciona la opcions </option>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+            </select>
+            <br><br>
+
+            <!-- textarea. Observacions -->
+            <textarea name="message" rows="10" cols="30">
+                The cat was playing in the garden.
+            </textarea>
+            <br><br>
+
+            <!-- llista avançada. Molts elements. Exemple poblacions  -->
+            <input list="browsers">
+            <datalist id="browsers">
+                <option value="Internet Explorer">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist>
+            <br><br>
+
+            <!-- input data -->
+            <input type="date">
+            <br><br>
+
+            <!-- email -->
+            <input type="email">
+            <br><br>
+
+            <!-- per annexar arxius -->
+            <input type="file"  >
+            <br><br>
+
+            <!-- tipus password -->
+            <input type="password">
+            <br><br>
+            <input type="submit" value="Enviar" >
+
+            <!-- per netejar formulari -->
+            <input type="reset">
+            <br><br>
+        </form>
+    </div>
+</body>
+
+</html>
