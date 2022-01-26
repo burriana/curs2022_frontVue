@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Position</title>
+    <meta charset="utf-8">
+    <link rel=stylesheet href="index.css">
+
+    <style type="text/css" media="screen">
+    article {
+        width: 120px;
+        height: 120px;
+        border: 5px solid black;
+        background: #FFF;
+        font-size: 14px;
+        font-family: courier;
+    }
+    .width25 {
+        width: 23%;
+        height: 800px;
+        background: rgba(255, 255, 255, 0.2);
+        float: left;
+        display: inline-block;
+        position: relative;
+        margin: 1%;
+
+    }
+    .static {
+        position: static;
+    }
+    .relative {
+        position: relative;
+    }
+    .absolute {
+        position: absolute;
+    }
+    .fixed {
+        position: fixed;
+    }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <h1>POSITION</h1>
+
+        <!-- Static -->
+
+        <div class="width25">
+        	<h3>STATIC</h3>
+            <article class="static">position: static;</article>
+            <article class="static">position: static;</article>
+        </div>
+
+
+
+        <!-- Relative -->
+        <div class="width25">
+        <h3>RELATIVE</h3>
+            <article class="relative">position: relative;</article>
+            <article class="relative" style="left: 15px; top: 15px;">position: relative; left: 15px; top: 15px;</article>
+            <article class="relative" style="left: -15px; top: -15px;">position: relative; left: -15px; top: -15px;</article>
+        </div>
+
+
+        <!-- Absolute -->
+        <div class="width25">
+        <h3>ABSOLUTE</h3>
+            <article class="absolute">position: absolute;</article>
+
+            <article class="absolute" style="right:0; bottom: 0;">position: absolute; right:0; bottom: 0;</article>
+            <article class="absolute" style="left: 30%; top: 30%; z-index: 1">position: absolute; left: 30%; top: 30%;<br> z-index: 1</article>
+            <article class="absolute" style="left: 50%; top: 50%;">position: absolute; left: 50%; top: 50%;</article>
+        </div>
+
+        <!-- Fixed -->
+        <div class="width25">
+        <h3>FIXED</h3>
+            <article class="fixed">position: fixed;</article>
+            <article class="fixed" style="right: 0; top: 0">position: fixed;<br> right: 0;<br> top: 0</article>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container {
+            /* We first create a flex layout context */
+            display: flex;
+
+            /* Then we define the flow direction and if we allow the items to wrap 
+                * Remember this is the same as:
+                * flex-direction: row;
+                * flex-wrap: wrap;
+            */
+            flex-flow: row wrap;
+
+            /* Then we define how is distributed the remaining space */
+            justify-content: space-around;
+
+            border-style: solid;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h2>An Unordered HTML List</h2>
+    <div class="flex-container">
+        <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+    </div>
+    <br>
+    <h2>An Ordered HTML List</h2>
+    <div class="flex-container">
+
+
+        <ol>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ol>
+    </div>
+
+
+</body>
+
+</html>

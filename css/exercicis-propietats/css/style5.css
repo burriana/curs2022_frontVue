@@ -10,7 +10,9 @@
 /*                                                */
 
 body {
-  background: url("fondos/corazon-1.svg") repeat-y top left, url("fondos/corazon-2.svg") repeat-y right top;
+  background: url("fondos/corazon-1.svg") repeat-y top left;
+  /*background-repeat: repeat-y top left;
+  background-image: url("fondos/corazon-1.svg");*/
   background-color: hsl(343, 100%, 96%);
   background-size: 150px;
   font-family: sans-serif;
@@ -40,7 +42,7 @@ div.s2 {
 }
 
 div.s3 {
-  background:  url("../fondos/ojo.svg") no-repeat center, url("../fondos/hexagonos.jpg");
+  background:  url("../fondos/estrellas.png") no-repeat top, url("../fondos/hexagonos.jpg");
   background-size: contain, auto;
   color: hsl(0, 100%, 25%);
 }

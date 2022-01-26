@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulario</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <form action="recibe.php" method="post">
+        <fieldset>
+            <legend>Tus datos personales</legend>
+
+            <p>
+                <label for="nombre">Tu nombre</label>
+                <input type="text" name="nombre" value="" placeholder="Tu nombre">
+            </p>
+            <p>
+            	<label for="ciudad">Tu ciudad</label>
+            	
+
+            	<select id="ciudad" name="ciudad">
+            		<option value="valencia">Valencia</option>
+            		<option value="alicante">Alicante</option>
+            		<option value="murcia">Murcia</option>            		
+            	</select>
+            </p>
+
+            <p>
+            	<label for="sobre-mi">Escribe sobre ti</label>
+            	<textarea name="sobre-mi" id="sobre-mi" placeholder="Escribe aquí"></textarea>         
+            </p>
+            <input type="color" name="" value="" placeholder="">
+
+        </fieldset>
+
+        <p>
+            <input type="submit">
+        </p>
+
+    </form>
+</body>
+
+</html>

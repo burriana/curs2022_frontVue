@@ -1,0 +1,87 @@
+body {  
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: 40px;
+}
+
+/************************************/
+/* Exercici 1) dos-columnes: mateix ample */
+#contenedor {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.col {
+  display: inline-block;
+  margin: 0%;
+  border: solid;
+  padding: 0%;
+  width: 40%;
+}
+
+/************************************/
+/* Exercici 2) dos-columnes: diferent ample */
+#contenedor-2 {
+  margin: 0;
+  border: solid;
+  padding: 0;
+  width: 100%;
+}
+
+#principal {
+  display: inline-block;
+  border: solid;
+  width: 75%;
+
+}
+
+#sidebar {
+  display: inline-block;
+  border: solid;
+  width: 20%;
+}
+
+/************************************/
+/* Exercici 3)dos-columnes: amb float */
+#contenedor-3 {
+  text-align: left;
+  width: 100%;
+  margin: auto;
+}
+
+#lateral {
+  width: 20%;
+  /* Este será el ancho que tendrá tu columna */
+  background-color: #CCCCCC;
+  /* Aquí pon el color del fondo que quieras para este lateral */
+  float: right;
+  /* Aquí determinas de lado quieres quede esta "columna" */
+}
+
+#principal-3 {
+  width: 75%;
+  float: left;
+  background-color: #FFFFFF;
+  border: #000000 1px solid;
+  /* ponemos un donde para que se vea bonito */
+}
+
+/* Para limpiar los floats */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/************************************/
+/* Exercici 4) dos-columnes: amb flex */
+#contenedor-4 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#contenedor-4>div {
+  width: 50%;
+}

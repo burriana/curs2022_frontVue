@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 16px;
+            /* (2em significa una alçada 2 vegades la mida de la font actual) */
+            line-height: 2em;
+        }
+
+        div {
+            font-size: 30px;
+            border: 1px solid black;
+        }
+
+        /* si span esta a dins del div, 0.5 indica una mida de 0.5 x 30 */
+        span {
+            font-size: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <p>These paragraphs have a calculated line-height of: 2x16px = 32px</p>
+    <p>These paragraphs have a calculated line-height of: 2x16px = 32px</p>
+    <p>These paragraphs have a calculated line-height of: 2x16px = 32px</p>
+    <div>The font-size of the div element is set to 30px. <span>The span element
+            inside the div element has a font-size of 0.5em, which equals to 0.5x30 =
+            15px</span></div>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+p.normal {
+    font-style: normal;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 2em;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+}
+
+div.normal {
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    padding-top: 3px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    padding-left: 7px;
+}
+
+h1.normal {
+    background-color: #FFFFFF;
+    background-image: url("fondos/estrellas.png");
+    background-repeat: no-repeat;
+    background-position: 10px 5px;
+}
+
+p.short  {
+    font: normal small-caps bold 0.5em/0.5 Arial, sans-serif;
+    line-height: 1.5;
+}
+
+div.short {
+    margin: 5px 10px;
+    padding: 3px 5px 10px 7px;
+}
+
+h1.short  {
+    background: #FFF url("imagenes/icono.png") no-repeat 10px 5px;
+}
