@@ -1,0 +1,30 @@
+body{
+    text-align: center;
+}
+
+article{
+    width: 20%;
+    height: 200px;
+    
+    /* Textos */
+    font-size: 1rem;
+    color: white;	
+    text-align: center;
+
+    /* Border redondeados*/
+    border-radius: 16px;
+    border: 3px dotted rgba(0,0,0, 0.3);
+    text-shadow: 10px 10px 10px rgba(0,0,0, 0.3);
+}
+
+#blanc{
+    background-color: rgb((255, 255, 255))
+}
+
+#lila{
+    background-color: #8e44ad
+}
+
+#groc{
+    background-color: #f1c40f
+}

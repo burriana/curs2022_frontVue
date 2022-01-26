@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Comparison between height/width attributes and height/width property
+    </title>
+
+    <style>
+        h1 {
+            color: green;
+        }
+
+        .container {
+            width: 95%;
+            border: 2px solid black;
+            padding: 5px;
+            height: 400px;
+        }
+
+        .first {
+            text-align: center;
+            width: 45%;
+            float: left;
+        }
+
+        .second {
+            text-align: center;
+            width: 45%;
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>GeeksforGeeks</h1>
+
+        <h2>
+            HTML height/width Attribute Vs CSS height/width property
+        </h2>
+
+        <div class="container">
+            <div class="first">
+                <h3>HTML width/height Attributes</h3>
+                <img src="" width="150px" height="150px" style="border:2px solid #000000;">
+
+                <iframe src="" width="150px" height="150px" style="border:2px solid #000000;">
+                </iframe>
+
+                <canvas src="" width="150px" height="150px" style="border:2px solid #000000;">
+                </canvas>
+
+                <svg src="" width="150px" height="150px" style="border:2px solid #000000;">
+                </svg>
+            </div>
+
+            <div class="second">
+                <h3>CSS width/height Property</h3>
+                <div width="150px" height="150px" style="border:2px solid #000000;">
+                    This is div tag
+                </div>
+
+                <br><br>
+
+                <span width="150px" height="150px" style="border:2px solid #000000;">
+                    This is span tag
+                </span>
+
+                <br><br>
+
+                <article width="150px" height="150px" style="border:2px solid #000000;">
+                    This is article tag
+                </article>
+
+                <br><br>
+
+                <section width="150px" height="150px" style="border:2px solid #000000;">
+                    This is section tag
+                </section>
+            </div>
+        </div>
+    </center>
+</body>
+
+</html>
