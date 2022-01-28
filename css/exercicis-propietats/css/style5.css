@@ -37,7 +37,7 @@ div.s1 {
 }
 
 div.s2 {
-  background: url("../fondos/fuego.svg") no-repeat bottom right, url("../fondos/fuego.svg") no-repeat bottom left, url("fondos/tallos.jpg");
+  background: url("../fondos/fuego.svg") no-repeat bottom right, url("https://www.uoc.edu/portal/system/modules/edu.uoc.presentations/resources/img/branding/logo-uoc-default.png_1618809817.png") no-repeat bottom left, url("fondos/tallos.jpg");
   color: hsl(52, 100%, 50%);
 }
 
