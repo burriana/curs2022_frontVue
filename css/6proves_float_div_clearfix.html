@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+            text-align: left;
+            width: 80%;
+            margin: auto;
+            border: solid;
+        }
+
+        #lateral {
+            width: 20%;
+            /* Este será el ancho que tendrá tu columna */
+            background-color: #CCCCCC;
+            /* Aquí pon el color del fondo que quieras para este lateral */
+            float: right;
+            /* Aquí determinas de lado quieres quede esta "columna" */
+        }
+
+        #principal {
+            width: 75%;
+            float: left;
+            background-color: #FFFFFF;                        
+        }
+
+        /* Para limpiar todos los floats */
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="main" class="clearfix">
+        <div id="lateral">
+            <p>Aquí irá el contenido alineado a la izquierda</p>
+        </div>
+
+        <div id="principal">
+            <p>contenido principal</p>
+        </div>       
+    </div>
+
+    <div>
+        prova
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,236 @@
+/* ==========================================================================
+   ESTILOS DEL INDEX DE CSS
+   ========================================================================== */
+
+/* 
+  GENERAL
+  ========================================================================== */
+
+/* Fuentes */
+
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
+
+/* Etiquetas */
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html{
+  min-height: 100%;
+}
+
+body {
+  font-size: 120%;
+  font-family: Lato, sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  border: 10px solis #FFF;
+  /* Radial BG*/
+  background-image: -webkit-radial-gradient(right bottom, farthest-side, #8286f3 0%, #ff80fc 100%);
+  background-image: -webkit-radial-gradient(farthest-side at right bottom, #8286f3 0%, #ff80fc 100%);
+  background-image: radial-gradient(farthest-side at right bottom, #8286f3 0%, #ff80fc 100%);
+}
+
+ul,
+ol {
+  margin: 2rem 0;
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 0;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  padding: 1rem 0;
+}
+
+a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 
+   General
+   ========================================================================== */
+
+.main {
+  font-size: 1.5rem;
+  text-align: center;
+  display: block;
+  padding: 5%;
+  text-align: center;
+}
+
+.main h1 {
+  font-weight: 100;
+  color: #FFF;
+  margin: 0 0 1rem 0;
+  font-style: italic;
+}
+
+.main h1:first-line {
+  font-size: 15rem;
+  font-style: normal;
+  margin-bottom: 1em;
+  text-shadow: 3px 3px 0px #FF80FC;
+  line-height: 100%;
+}
+
+/* Lista */
+
+.main ul {
+  background: #FFF;
+  border: 1px solid #FF80FC;
+  width: 400px;
+  margin: 1em auto;
+}
+
+.main li {
+  border-bottom: 1px solid #FF80FC;
+  margin: 0;
+  padding: 0;
+}
+
+.main li a {
+  color: #FF80FC;
+  display: block;
+  padding: 20px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.main li a:hover, .main li a:hover small{
+  background-color: #FF80FC;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.main li a small{
+  color: #CCC;
+  display: block;
+  font-size: 15px;
+  font-weight: 100;
+  margin-top: 8px;
+  font-style: italic;
+  background: transparent;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+/* 
+   DESCRIPTION BOX
+   ========================================================================== */
+
+.description{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #FFF;
+  padding: 1em 1.5em;
+  font-size: 80%;
+  text-align: left;
+  background: #FFF;
+  border: 1px solid #FF80FC;
+}
+.description p{
+  margin: 0 0 .5em 0;
+}
+.description ul{
+  margin: 0;
+}
+.description ul li{
+  margin: 0 0 .5em 0;
+  padding: 0;
+}
+.description a{
+  color: #FF80FC;
+}
+
+
+
+/* 
+   ANIMATIONS
+   ========================================================================== */
+
+.animated {
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: .8s;
+  animation-duration: .8s;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+.delay10 {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+}
