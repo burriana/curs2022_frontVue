@@ -1,0 +1,70 @@
+/* GLOBAL STYLES */
+ body {
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0;
+ }
+
+a {
+   color: white;
+   font-weight: 300;
+   letter-spacing: 2px;
+   text-decoration: none;
+   background: rgb(238, 13, 130); /*#EE0D82*/
+   padding: 20px 5px;   
+   width: 100%;
+   display: block;
+   text-align: center;
+}
+
+a:hover {
+   background: rgba(238, 13, 130, 0.75);
+}
+
+.main {
+   max-width: 1000px;
+   margin: 0 auto;
+   padding: 0 3em 1.5em;
+}
+
+.navigation ul {
+   list-style: none; /*#EE0D82*/
+   margin: 0;
+   padding: 0;
+   display: flex;
+}
+
+.navigation .pages {
+   flex: 1;   
+   justify-content: flex-start;
+
+}
+
+.navigation .user {
+   flex: 0.3;
+   justify-content: flex-end;
+}
+
+@media all and (max-width: 1000px) {
+   .navigation ul {
+      flex-wrap: wrap;
+   }
+   
+   .navigation li {
+      flex: 1 1 50%;
+
+   }
+
+   .navigation .user {
+      flex: 1 1 33.33%;
+   }
+}
+
+@media all and (max-width: 480px) {
+   .navigation li {
+      flex-basis: 100%;
+   }
+
+   .navigation .user {
+      flex-basis: 50%;
+   }
+}

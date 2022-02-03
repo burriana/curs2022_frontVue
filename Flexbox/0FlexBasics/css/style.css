@@ -1,0 +1,43 @@
+/* GLOBAL STYLES */
+
+body {
+    background-color: #AAA;
+    margin: 0px 50px 50px;
+}
+
+.container {
+    display: flex;    
+    flex-flow: row wrap;    
+    background-color: #f5ca3c;    
+    height: 500px;
+    align-items:flex-end  ;
+}
+
+.item {
+    background-color: #1c57b5;
+    padding: 2rem;
+    margin: 0.2rem;
+    border: 5px solid #87b5ff;
+    font-size: 1em;
+    font-family: sans-serif;
+    font-weight: bold;      
+    height: 100px ;
+}
+
+.item1 {    
+  order: 2;  
+  align-self: flex-start;
+}
+
+.item2 {
+  order: 1;
+}
+
+.item3 {
+  order:4;
+}
+
+.item4 {
+  order:3;
+
+}

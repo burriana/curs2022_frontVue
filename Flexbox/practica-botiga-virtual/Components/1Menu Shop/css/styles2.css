@@ -1,0 +1,104 @@
+* {
+   margin: 10px;
+   padding: 10px;
+}
+
+body{
+   background: white;
+   color: #000;
+   font-size: 16px;
+   font-family: 'oswald', sans-serif;
+}
+
+ul{
+  list-style: none; 
+}
+
+a{
+color: black;
+text-decoration: none;
+}
+
+/* MENU */
+.menu{
+   display: flex;
+   flex-flow: row nowrap;
+   font-size: 17px;      
+   align-items: center;   
+   width: 85% ;
+   margin: auto;
+   padding: 0;
+   justify-content: center;   
+}
+
+/*  logo */
+.logo{      
+   display: flex;   
+   flex:0.5;
+
+}
+
+/*  MENU */
+.nav-menu{
+   display: flex;  
+   flex:5;  
+   align-items: center;
+   justify-content: flex-start;   
+}
+
+.menu ul.nav-menu li a {   
+   padding: 2px;
+   color:grey;
+}
+
+/* Les opcions cliclables han de tenir efecte roll-over.*/
+.menu ul.nav-menu li a:hover {
+   /* Si passem per sobre que subratlli el text.*/
+   border-bottom: 1px solid black;
+}
+
+
+/*  SOCIAL */
+.social{
+   display: flex;         
+   flex:1;  
+   margin:0;
+   padding:0;
+}
+
+/* icons */
+.menu ul.social i {
+   color:grey;
+}
+
+
+/*  mobil */
+@media only screen and  (max-width: 420px ){
+  
+
+}    
+
+
+@keyframes moveLeft{
+   0%{
+       opacity: 0;
+       transform: translateX(-100px);
+   }
+
+   100%{
+       opacity:1;
+       transform: translate(0);
+   }
+}
+
+@keyframes moveUp{
+   0%{
+       opacity: 0;
+       transform: translateY(50px);
+   }
+
+   100%{
+       opacity:1;
+       transform: translate(0);
+   }
+}
