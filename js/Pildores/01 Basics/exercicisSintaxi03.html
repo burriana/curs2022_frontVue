@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Exercici 03</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /* 2. Implementa un programa que comprovi que les dades 
+        introduïdes són números. */
+		var requiredNum = prompt("Introduce any number: ");
+        // Parse the number
+        parseInt(requiredNum);
+        // Check if the content of the variable is whether a number or not
+        if (!isNaN(requiredNum)) {
+            window.alert("\"" + requiredNum + "\"" + " is a number.")
+        } else {
+            window.alert("\"" + requiredNum + "\"" + " is not a number.")
+        }
+	</script>
+</body>
+</html>

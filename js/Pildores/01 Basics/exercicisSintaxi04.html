@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Exercici 04</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        /* 3. Fes un programa que demani dos números a l’usuari i informi 
+        per pantalla de quin és el menor i el major, o si són iguals. */
+        var firstNum = prompt("Introduce any number: ");
+        var secondNum = prompt("Introduce another number: ");
+
+        // Check the which one is the greatest number or if they're the same
+        if (firstNum > secondNum) {
+            window.alert(firstNum + " is the greatest number.");
+        } else if (secondNum > firstNum) {
+            window.alert(secondNum + " is the greatest number.");
+        } else {
+            window.alert("They\'re the second number.'");
+        }
+
+        if (firstNum == secondNum) {
+            document.write(" are the same ")
+        } else if (firstNum > secondNum) {
+            document.write(firstNum + " is the greatest number.")
+        } else {
+            document.write(secondNum + " is the greatest number.")
+        }
+    </script>
+</body>
+
+</html>
