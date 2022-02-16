@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>exercici Maths 2</title>
+	</head>
+	<body>
+		<!-- HTML -->
+		<h1>exercici01</h1>		
+
+		<!-- JS -->1
+		<script>
+			let first_number = parseInt(prompt("Insereix el PRIMER nombre"));
+			let second_number = parseInt(prompt("Insereix el SEGON nombre"));
+			let random_number = 0  ;
+
+			// 1a manera de fer-ho
+			// Math.floor(Math.random() * (max - min)) + min; -> Generates a random number between two.			
+			let min_number= Math.min(first_number,second_number );
+			let max_number= Math.max(first_number,second_number );
+			random_number = Math.floor(Math.random() * (max_number - min_number)) + min_number;
+			console.log(" manera + eficient .... Primer = " + min_number + "\nSegon = " + max_number + "\nNumero aleatori = " + random_number);
+
+			// 2a manera de fer-ho
+			// Math.floor(Math.random() * (max - min)) + min; -> Generates a random number between two.
+			if (first_number < second_number) {
+				random_number = Math.floor(Math.random() * (second_number - first_number)) + first_number;
+			} else if (second_number < first_number) {
+				random_number = Math.floor(Math.random() * (first_number - second_number)) + second_number;
+			} else {
+				random_number = first_number;
+			}
+
+			alert("Primer = " + first_number + "\nSegon = " + second_number + "\nNumero aleatori = " + random_number);
+			console.log("Primer = " + first_number + "\nSegon = " + second_number + "\nNumero aleatori = " + random_number);
+		</script>
+	</body>
+</html> 
