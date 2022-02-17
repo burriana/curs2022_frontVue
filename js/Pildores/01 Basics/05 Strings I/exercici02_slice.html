@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Exercici 02</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    /* 2) Practicarem amb: .replace , .slice i indexOf
+    const producto = 'Monitor 20 Pulgadas'; */
+
+        // a) Replace de 'Monitor 20 Pulgadas' -->  'Monitor 40 ''
+        let descProducto = 'Monitor 20 Pulgadas';       
+        console.log("***** Replace *****");
+        descProducto= descProducto.replace('Pulgadas', '\'' );
+        console.log(descProducto);
+        descProducto= descProducto.replace("20", "40");
+        console.log(descProducto);
+        console.log("*******************\n\n");
+
+        // b) Slice te va a permitir extraer una parte de una cadena -> 20 Pulgadas.
+        // Pero primero debes saber en q posicion encontramos la cadena         
+        console.log("***** Slice i indexOf 1) *****");
+        descProducto = "Monitor 40 ' ";      
+        posicionPulgadas= descProducto.indexOf("40 '")
+        console.log("posicion pulgadas " + posicionPulgadas); 
+        pulgadas = descProducto.slice(posicionPulgadas);
+        console.log("pulgadas " + pulgadas); 
+        console.log("*******************\n\n");
+                
+        // C) nitor 20
+        console.log("***** Slice i indexOf 2)*****");
+        descProducto = 'Monitor 20 Pulgadas';
+        posicionInicio = descProducto.indexOf("nitor 20");
+        console.log(" posicion Inicio: "  + posicionInicio); 
+
+        posicionFinal = descProducto.indexOf("Pulgadas");
+        console.log(" posicion Final: "  + posicionFinal); 
+
+        nitor= descProducto.slice(posicionInicio, posicionFinal); // Escribe desde donde encuentra la palabra hasta donde encuentra pulgadas
+        console.log(" cadena Encontrada: "  + nitor); // cortar desde 2 hasta el 10
+        console.log("*******************\n\n");
+
+        //OJO: Si el primer número es mayor, no va a cortar hacia atras...
+        console.log(descProducto.slice(2, 1));
+
+        // PAra ello existe uno similar a Slice que se llama substring
+        console.log("***** Amb Substring *****");
+        console.log(descProducto.substring(0, 10));
+        console.log(descProducto.substring(11,2)); // Si el número es mayor al segundo, va a cortar hacia atras (voltear los números)
+        console.log("*******************\n\n");
+
+        //d)  Mostra La primer letra de tu nombre:
+        console.log("***** CharArt *****");
+        const nombre = "Juan";
+        console.log(nombre.substring(0, 1));
+        console.log(nombre.charAt(0));
+        console.log("*******************\n\n");
+    </script>
+</body>
+
+</html>

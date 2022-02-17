@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Exercici 03</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        /* 3) Practicarem amb Split
+        const actividad = 'Estoy aprendiendo Javascript Moderno';
+        Separa variable actividad, tenint en compte espai en blanc.
+        const hobbies = 'Leer, caminar, escuchar musica, escribir, aprender a programar';
+        Ara fes-ho tenint en compte la coma. */
+
+        // Split
+        const actividad = 'Estoy aprendiendo Javascript Moderno';
+        let newActividad = actividad.split(" ");
+        console.log(newActividad);
+
+        const  hobbies = 'Leer, caminar, escuchar musica, escribir, aprender a programar';
+        let hobbiesNew = hobbies.split(", ");
+        console.log(hobbiesNew);
+
+        hobbies = 'Leer - caminar - escuchar musica - escribir - aprender a programar';
+        let hobbiesNew2 = hobbies.split("- ")
+        console.log(hobbiesNew2);
+    </script>
+</body>
+
+</html>

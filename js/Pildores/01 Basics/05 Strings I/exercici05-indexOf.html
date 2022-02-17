@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Exercici 05</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        /*5)  Realitzar la cerca d'un string en un string origen. Cal ingressar una frase o text (font) i després la clau a cercar. En cas de trobar-la, imprimir la posició, altrament una llegenda que indiqui que no hi és. */
+        let frase = prompt('Ingrese una oración:');
+        document.write(frase + '<br><br>');
+        let palabra = prompt('Ingrese una palabra:');
+        document.write(palabra + '<br><br>');
+        var dondeEstaPalabra = frase.indexOf(palabra);
+        document.write("donde esta" + dondeEstaPalabra);
+       
+        if( dondeEstaPalabra == -1){
+            document.write(" Mo encontrado");
+        } else {
+            document.write(" Encontrado");
+        }
+
+
+        if ( dondeEstaPalabra != -1) {
+            document.write('La frase ingresada contiene la palabra: ' + palabra + ' a partir de la posición ' + frase.indexOf(palabra) + '<br><br>');
+        } else {
+            document.write('La frase ingresada no contiene la palabra: ' + palabra + "<br><br>");
+        }
+
+        let longitudFrase = frase.length;
+        document.write("longitud de la frase " + longitudFrase + '<br><br>'); 
+    </script>
+</body>
+
+</html>

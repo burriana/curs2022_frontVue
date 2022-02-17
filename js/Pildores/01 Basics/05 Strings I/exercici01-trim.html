@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Exercici 01</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        /*1)    Donat el següent string:
+                const producto = ' Monitor 20 Pulgadas ';
+                Elimina tots els espais en blanc de l’inici i del final 
+        */
+
+        let  producto = '        Monitor 20 Pulgadas      ';
+
+
+        console.log("num con:" + producto.length);
+        console.log("num sin" + producto.trim().length);
+
+        // Eliminar el inicio
+        var nuevoProducto= producto.trimStart().length;
+
+        console.log("nuevo prod" + nuevoProducto);
+
+        console.log(producto.trimStart()); // Elimina todos los espacios en blancos del inicio
+        console.log(producto.trimEnd()); // Elimina todos los espacios en blancos del final
+
+        // Los métodos en javaScript se pueden encadenar, es decir, colocarse uno junto al otro
+        console.log(producto.trimStart().trimEnd()); // Cortar en ambas direcciones
+
+        // Un método (que ya tiene rato ) es trim que hace lo mismo
+        console.log(producto.trim().length);
+    </script>
+</body>
+
+</html>
