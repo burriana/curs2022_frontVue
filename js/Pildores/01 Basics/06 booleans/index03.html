@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //a TRUE
+        var a = (2 < 12);
+        console.log(a); 
+
+        //b, TRUE, 2 is greater than 1 so it is true
+        var b = 2 < "12";
+        console.log(b); 
+
+        //c False, al ser les dues cadenes mira primer el 1
+        var c = "2" < "12";
+        console.log(c); 
+
+        //d TRUE ... NEga el False
+        var d = !("2" < "12"); 
+        console.log(d);
+
+        //e, TRUE. True && true = True
+        var e = ((2 < "12") && (2 == "2")); 
+        console.log(e);
+
+        //f, TRUE. El primer es fals, el segon es true, false || true = true
+        var f = ("2" < "12") || (2 < 12); // 
+        console.log(f);
+
+        //g, False. El primer es fals, el segon es true, false && true = False
+        var g = ("2" < "12") && (2 < 12); 
+        console.log(g);
+    </script>
+</body>
+
+</html>
