@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       //escenari 1: El usuario no puede hacer la compra
+       //let usuarioDNI = false; 
+       //let puedePagar = false; 
+       //let usuariMajorEdat = false;
+
+       //escenari 2
+       //let usuarioDNI = true; 
+       //let puedePagar = true; 
+       //let usuariMajorEdat = true;
+
+       //escenari 3
+       //let usuarioDNI = false; 
+       //let puedePagar = false; 
+       //let usuariMajorEdat = false;
+
+       //escenari 4
+       let usuarioDNI =true ; 
+       let puedePagar =true;
+       let usuariMajorEdat =false;
+       //let DNI ="87654321X";
+       //let edat=25;
+
+        if (  usuarioDNI==true && puedePagar==true && usuariMajorEdat ) {            
+            console.log("si pots pagar: té un DNI correcte i té diners a la targeta i és major d'edat");
+        } else if (puedePagar==false) {
+            console.log("Ho sento molt pero no tens diners");
+        } else if (usuariMajorEdat==false){
+            console.log("Ho sento molt però no tens la edat per fer la compra");
+        } else{
+            console.log("L'usuari no és correcte");
+        }
+
+    </script>
+</body>
+</html>

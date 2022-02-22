@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Algunas veces vas a desear revisar si se cumple más de una condición...
+        //escenario1
+        const rol = "";
+
+        //escenario2
+        //const rol = "EDITOR";
+ 
+        if (rol == 'ADMIN') {
+            console.log('El Usuario puede editar, eliminar y ver toda la información');
+        } else if (rol == 'EDITOR') {
+            console.log('El usuario puede editar todos los registros');
+        } else if (rol == 'AUTOR') {
+            console.log('El usuario solo puede registrar usuarios');
+        } else {
+            console.log('El Usuario es visitante, solo puede ver la información');
+        }
+
+        // El problema del else if es que si agregas múltiples llegan a ser complejos de leer... 
+        // Podriem fer
+        switch (rol) {
+            case 'ADMIN':
+                console.log('El Usuario puede editar, eliminar y ver toda la información');
+                break;
+            case 'EDITOR':
+                console.log('El usuario puede editar todos los registros');
+                break;
+            case 'AUTOR':
+                console.log('El usuario solo puede registrar usuarios');
+                break;
+            default:
+                console.log('El Usuario es visitante, solo puede ver la información');
+                break;
+        }
+    </script>
+</body>
+
+</html>

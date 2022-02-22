@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let efectivo = 100;
+        let credito = 700;
+        let disponible = efectivo + credito;
+        let totalCarrito = 700;
+
+        if (efectivo >= totalCarrito || credito >= totalCarrito) {
+            console.log('Puedes pagar con efectivo o credito');
+        } else if (disponible >= totalCarrito) {
+            console.log('Paga con ambos');
+        } else {
+            console.log('No puedes pagar');
+        }
+    </script>
+</body>
+
+</html>

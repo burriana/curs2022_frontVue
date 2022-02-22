@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 6. Demana una nota (número). Mostra qualificació segons nota:
+                0-3: Mol deficient
+                3-5: Insufficient
+                5-6: Sufficient
+                6-7: Bé
+                7-9: Notable
+                9-10: Excel·lent */
+        // Demanem la nota
+        var nota = prompt("Introdueix la teva nota");
+        // Mostrem un missatge segons la nota
+
+        switch (true) {
+            case (nota >= 0 && nota < 3):
+                alert("Mol deficient");
+                break;
+            case (nota >= 3 && nota < 5):
+                alert("Insuficient");
+                break;
+            case (nota >= 5 && nota < 6):
+                alert("Suficient");
+                break;
+            case (nota >= 6 && nota < 7):
+                alert("Bé");
+                break;
+            case (nota >= 7 && nota < 9):
+                alert("Notable");
+                break;
+            default:
+                alert("Excel·lent");
+                break;
+        }
+
+        // Una altra manera de fer-ho
+        console.log("He realizado mi examen. Mi resultado es el siguiente:");
+        switch (nota) {
+            case 10:
+            case 9:
+                calificacion = "Sobresaliente";
+                break;
+            case 8:
+            case 7:
+                calificacion = "Notable";
+                break;
+            case 6:
+                calificacion = "Bien";
+                break;
+            case 5:
+                calificacion = "Suficiente";
+                break;
+            case 4:
+            case 3:
+            case 2:
+            case 1:
+            case 0:
+                calificacion = "Insuficiente";
+                break;
+            default:
+                // Cualquier otro caso
+                calificacion = "Nota errónea";
+                break;
+        }
+
+        console.log("He obtenido un", calificacion);
+    </script>
+
+</body>
+
+</html>
