@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 2. Crear un programa que lea un número entero y a partir
+        de él cree un cuadrado de asteriscos con ese tamaño. */
+        let requiredNum = 8;
+        let i,j;
+        cadena= "";
+
+        // Create the square with the '*' character
+        for (i = 0; i < requiredNum; i++) {
+            // Create the line that we will insert to create the square
+            for (j = 0; j < requiredNum; j++) {
+                //document.write("-");
+                cadena = cadena + "*";
+            }            
+            cadena = cadena + "\n";
+            //document.write("<br>")
+        }
+
+        console.log(cadena)
+    </script>
+</body>
+
+</html>

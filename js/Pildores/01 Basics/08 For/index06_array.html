@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 5. Recorre el següent objecte, mostrant per pantalla el nom del producte  
+        const carrito = [{
+                id: 1,
+                producto: 'Libro'
+            },
+            {
+                id: 2,
+                producto: 'Camisa'
+            },
+            {
+                id: 3,
+                producto: 'Disco'
+            }
+        ]; */
+
+
+        const carrito = [{
+                id: 1,
+                producto: 'Libro'
+            },
+            {
+                id: 2,
+                producto: 'Camisa'
+            },
+            {
+                id: 3,
+                producto: 'Disco'
+            }
+        ];
+
+
+       for (let index = 0; index < carrito.length ; index++) {
+          console.log("1 agregaste " + carrito[index].producto ); 
+       }
+
+       //Javascript modern. Això ho veurem més endevant
+       carrito.forEach(producto => {
+           console.log("2 agregaste " + producto.producto ); 
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Exercici 01</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    /* 5.	Codifiqueu un programa que permeti carregar una oració per teclat, després mostrar cada paraula ingressada en una línia diferent.  Per exemple si carrega: El matí és fred.
+    Ha d'aparèixer:
+    El 
+    matí
+    és
+    fred. */
+
+        let frase = prompt('Introdueix una frase:');
+
+        for (let f = 0; f < frase.length; f++) {
+            if (frase.charAt(f) == ' ') {
+                document.write('<br>');
+            } else {
+                document.write(frase.charAt(f));
+            }
+        }
+
+        document.write('<br><br>Ho podem fer amb split ....<br>');
+        let paraules = frase.split(" ");
+        
+        for (let j = 0; j < paraules.length; j++) {
+            document.write(paraules[j] + "<br>" );
+        }
+
+
+    </script>
+</body>
+
+</html>
