@@ -8,23 +8,32 @@
     <title>Document</title>
 </head>
 
-<body>
+<body>    
+    <p id="demo"></p>
     <script>
         /* 3. Crear un programa que lea un número entero y a partir
         de él cree un cuadrado de asteriscos con ese tamaño. */
         let columnes = 5;
         let files = 4;
+        var cadena="";
 
         let i, j;
         // Create the square with the '*' character
+        document.write("Empezamos los bucles<br>")
         for (i = 0; i < files; i++) {
             // Create the line that we will insert to create the square
-            for (j = 0; j < columnes; j++) {
+            for (j = 0; j < columnes; j++) {                
                 document.write("*")
+                cadena += "*"
             }
             document.write("<br>")
+            cadena += "<br>"
         }
+
+        document.getElementById("demo").innerHTML = "<br>Despues del bucle<br>" + cadena;
+        
     </script>
+
 </body>
 
 </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Exercici 01</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        /* 6.	Ingressar una paraula o text per teclat i determinar si és o no una paraula palíndrom. (Paraula que es llegeix d'igual manera d’endavant cap enrere, que de darrere cap endavant) */
+
+        let texto = prompt('Ingrese una palabra o frase:');
+        let cant = 0;
+        for (let f = 0; f < texto.length; f++) {
+            if (texto.charAt(f) == texto.charAt(texto.length - 1 - f)) {
+                cant++;
+            }
+        }
+        if (cant == texto.length) {
+            document.write(texto + ' se lee igual en ambas direcciones');
+        } else {
+            document.write(texto + ' no se lee igual en ambas direcciones');
+        }
+    </script>
+</body>
+
+</html>

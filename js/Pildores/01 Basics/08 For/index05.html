@@ -14,7 +14,7 @@
     matí
     és
     fred. */
-
+        // PRIMER MANERA DE FER-HO : charAt
         let frase = prompt('Introdueix una frase:');
 
         for (let f = 0; f < frase.length; f++) {
@@ -25,6 +25,7 @@
             }
         }
 
+        // SEGONA MANERA DE FER-HO : split
         document.write('<br><br>Ho podem fer amb split ....<br>');
         let paraules = frase.split(" ");
         

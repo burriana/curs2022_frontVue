@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p id="resultat"></p>
+    <script>
+        /* Fes un programa que mostri el següent per pantalla:                            
+
+            *
+                        
+            * *
+
+            * * *
+
+            * * * *
+
+            * * * * *
+
+            * * * * * *
+            El nombre de línies formades per “*” vindrà donat per una variable.            
+            Condició: En tot el codi del programa només hi pot haver un * */
+
+        var x = 5;    
+
+        let text = "";        
+        for (let i = 0; i <= x; i++) { //linies
+            for (let e = 0; e < i; e++) { //estrelles
+                text += " * ";
+            }
+            text = text + "<br>" + "<br>";
+        }
+        document.getElementById("resultat").innerHTML = text;
+        
+    </script>
+</body>
+
+</html>

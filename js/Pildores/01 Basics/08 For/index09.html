@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+ 
+    <script>
+        /*  
+            Defineix una variable, per asignar el nº de paraules que volem demanar a un usuari.
+            S'han de demanar tants “prompts” com el nº de paraules assignat. 
+            Les paraules es guarden en una cadena, separades per <br>. 
+            Un cop han sigut totes introduïdes, es mostren per pantalla amb un document.write */
+
+        let numParaules = 4;
+        let cadena = "";
+
+        for (let i = 0; i < numParaules; i++) {
+            let paraula = prompt("Paraula " + i )
+            // Les dues sentencies següents són iguals.
+            // cadena = cadena +  paraula + "<br>"
+            cadena +=  paraula + "<br>"
+        }
+        document.write(cadena)
+
+    </script>
+
+</body>
+
+</html>
