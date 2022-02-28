@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Exercici 01</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        /* 3.	Fes un programa que vagi demanant diferents paraules per pantalla ( fes us del prompt ), quan introdueixis la paraula Fi, deixaràs de demanar més paraules. I  mostraràs per pantalla el número de paraules que has introduït. */
+        
+        let nombre;
+        let cant = 0;
+        do {
+            nombre = prompt('Entra una paraula (Per acabar, escriure Fi):');
+            cant++;
+        } while (nombre != 'Fi');
+        //para descontar la palabra Fin
+        cant--;
+        document.write('Has entrat ' + cant + ' palabras');
+    </script>
+</body>
+
+</html>

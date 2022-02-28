@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 2. Utilitzant el bucle do while, demana un número per pantalla i calcula si és un número primer
+        En matemáticas, un número primo es un número natural mayor que 1 que tiene únicamente dos divisores positivos distintos: él mismo y el 1*/
+
+        var dividend, divisor, quocient, residu;
+
+        // Aquesta variable la farem servir per definir el resultat. Per defecte assigem que si és primer
+        var esPrimer = true;
+
+        //inicialitzem el valor del dividend, és a dir
+        //el número que volem comprovar si es primer
+        dividend = window.prompt("Entra un número:");
+
+        //els números 1 i 2 reben un tractament especial
+        //al ser l'inici de la sèrie
+        if (dividend != 1 && dividend != 2) {
+            //comencem a dividir entre dos, tots els números
+            //són divisibles entre ell mateix i l'1
+            divisor = 2;
+            //comencem a provar amb diferents divisors
+            //fins que quocient > divisor
+            do {
+                quocient = dividend / divisor;
+                residu = dividend % divisor;
+                //mostrem per pantalla variables
+                console.log("dividend: " + dividend + "");
+                console.log("divisor: " + divisor + "");
+                console.log("quocient: " + quocient + "");
+                console.log("residu: " + residu + "");
+                console.log("---------");
+                //si el residu es 0, vol dir que el número
+                //és divisible per altres números
+                if (residu == 0) esPrimer = false;
+                //passem següent divisor
+                divisor++;
+                //seguim fins que el quocient es menor que el
+                //divisor, llavors seria redundant
+            } while (quocient > divisor);
+        }
+
+        //imprimim per pantalla el resultat
+        if (esPrimer) {
+            console.log("" + dividend + " és primer");
+        } else {
+            console.log("" + dividend + " no és primer");
+        }
+    </script>
+
+</body>
+
+</html>

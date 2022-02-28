@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcions 01</title>
+</head>
+
+<body>
+    <script>
+        //1. nombre y apellido son parametros, son valores que se le pueden pasar a la función... Los valores digamos no son reales, pues son variables...
+        function saludar(nombre, apellido, sexo) {
+            switch (sexo) {
+                case 'D':
+                    console.log(`Benvinguda ${nombre}  ${apellido} `);
+                    break;
+                case 'H':
+                    console.log(`Benvingut ${nombre}  ${apellido} `);
+                    break;
+                default:
+                    console.log(`Hola ${nombre}  ${apellido} `);
+                    break;
+            }
+        }
+
+        var nom ;
+        var cognom ;
+        var sexe ;
+
+        //escenari 1
+        nom = "Juan";
+        cognom = "Lopez";
+        sexe = "H"
+        saludar(nom, cognom, sexe);
+
+        //escenari 2
+        nom = "Anna";
+        cognom = "Marcilla";
+        sexe = "D"
+        saludar(nom, cognom, sexe);
+
+        //escenari 3
+        saludar('Aran', 'Martinez', 'X');
+
+        //escenari 4
+        saludar();
+    </script>
+
+</body>
+
+</html>

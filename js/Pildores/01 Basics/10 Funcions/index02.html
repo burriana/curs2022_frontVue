@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcions</title>
+</head>
+
+<body>
+    <script>
+
+        // 2. Programa en JavaScript on es calculi l’edat d’un gos. Donat els seguents anys de neixement: 1975, 1963, 2000, 2019, 2015. 
+        function edatGos(anyNaixement) {            
+            let edat = anyActual - anyNaixement;
+            document.write("El gos nascut el " + anyNaixement + " aquest any tindrà " + edat + " anys <br/>");
+        }
+
+        
+
+        const anyActual = 2022;            
+
+        edatGos(1975);
+        edatGos(1963);
+        edatGos(2000);
+        edatGos(2019);
+        edatGos(2015);
+
+        function gosJove(anyNaixement) {            
+            let edat = anyActual - anyNaixement;
+            if (edat<4){
+                return true;
+            } else {
+                return false;
+            }            
+        }
+
+        var gos1,gos2, gos3, gos4, gos5;
+        gos1 = gosJove(1975);
+        console.log(gos1);
+
+        gos2 = gosJove(1963);
+        console.log(gos2);
+
+        gos3 = gosJove(2020);
+        console.log(gos3);
+
+        gos4 = gosJove(2019);
+        console.log(gos4);
+
+        gos5 = gosJove(2015);
+        console.log(gos5);
+
+         
+
+    </script>
+
+</body>
+
+</html>

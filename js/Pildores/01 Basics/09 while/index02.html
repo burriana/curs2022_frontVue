@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // generate a secret number between 1 and 10
+        const MIN = 1;
+        const MAX = 10;
+
+        let secretNumber = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;
+        let guesses = 0; // for storing the number of guesses        
+
+       
+        do {
+            // tornem a provar fins que no el trobem
+            number = parseInt(prompt("Torna a provar. Entra un numero entre el " + MIN + " i el " + MAX));
+
+            // increase the number of guesses
+            guesses++;
+        } while ((number != secretNumber) && (guesses < 5));
+
+        if ((number == secretNumber) || (guesses < 5)) {
+            alert("Felicitats, has trobat el Numero secret a l'intent " + guesses);
+        } else {
+            alert("Has utilitzat massa intents! El número era" + " " + secretNumber);
+        }
+    </script>
+
+</body>
+
+</html>
