@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Exercici 01</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    /* 6. Donada una adreça de correu, implementa una funció que verifiqui si el email té carregat el caràcter @. */ 
+
+        function verificarArroba(mail) {
+            let cant = 0;
+            for (let f = 0; f < mail.length; f++) {
+                if (mail.charAt(f) == '@') {
+                    cant++;
+                }
+            }
+            if (cant != 0) {
+                document.write('El mail ' + mail + ' tiene el caracter @ <br>');
+            } else {
+                document.write('El mail ' + mail + ' no tiene el caracter @ <br>');
+            }
+        }
+        
+        verificarArroba("pp@pp.es");
+        verificarArroba("pppp.es");
+
+        document.write('<br><br>Fem que retorni si es email correcte  <br>');
+        function verificarArroba2(mail) {
+            let trobat=false;
+            for (let f = 0; f < mail.length; f++) {
+                if (mail.charAt(f) == '@') {
+                    trobat=true;
+                }
+            }            
+        }
+
+        var trobat=false;
+        trobat= verificarArroba2("pp@pp.es");
+        trobat= verificarArroba2("pppp.es");
+
+    </script>
+</body>
+
+</html>

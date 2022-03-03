@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcions</title>
+</head>
+
+<body>
+    <script>
+        
+        // 6. Programa en JavaScript on se li passi a una funció dos arguments: string1 -frase- i string2-caràcter-, i retorna quants caràcters hi ha en total =  string1 + string2.
+        function getLongitud(cadena1, cadena2) {
+            // Concatenem les cadenes
+            let concat = cadena1 + cadena2;            
+            return concat.length
+        }
+
+        var longTotal;
+
+        longTotal = getLongitud("Hola", "Curs Front-end");
+        document.write("La longitud de la cadena es: " + longTotal + "<br>");
+
+        longTotal = getLongitud("Hola ", " Curs Front-end ");
+        document.write("La longitud de la cadena es: " + longTotal + "<br>");
+
+        longTotal = getLongitud("cadena1", "cadena2");
+        document.write("La longitud de la cadena es: " + longTotal + "<br>");
+       
+    </script>
+
+</body>
+
+</html>

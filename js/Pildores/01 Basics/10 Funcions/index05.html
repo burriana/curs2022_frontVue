@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /*
+        ## Analitza e investiga les diferencies entre les següents funcions. 
+        ## Aquesta és una pregunta de entrevista com a JS Developer
+               
+        Eso pasa porque JavaScript se ejecuta digamos en 2 vueltas - Eso se le conoce como Hoisting 
+        
+        1) la primer vuelta registra todas las funciones y determina las variables, esta etapa se le llama de creación, 
+        2) la segunda pasada es la que executa tu codigo, se llama de ejecución.
+       
+        Por lo tanto el primer código funciona porque function se registra primero y después se ejecuta el código.
+
+        El segundo no funciona porque si bien es una función no es declarada como tal, lo interpreta como una variable...
+
+        */
+
+        sumar();
+        function sumar() {
+            console.log(2 + 2);
+        }
+
+        sumar2();
+        const sumatorio = function sumar2() {
+            console.log(3 + 3);
+        }
+       
+    </script>
+</body>
+
+</html>

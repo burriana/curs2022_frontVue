@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Exercici 01</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        /*  7.	Carregar un String per teclat i implementar les funcions següents:
+        a.	Imprimir la primera meitat dels caràcters de la cadena.
+        b.	Imprimir el darrer caràcter.
+        c.	Imprimir-ho en forma inversa.
+        d.	Imprimir cada caràcter del String separat amb un guió.
+        e.	Imprimir la quantitat de vocals emmagatzemades. */
+
+        function mitad(frase) {
+            document.write('Mitad inicial de la frase:');
+
+            //1a manera
+            var posicio  = Math.round(frase.length/2);
+            var fraseMitad = frase.slice(0, posicio);
+            frase.indexOf
+            // També podriem fer amb substr
+            //var fraseMitad= frase.substr(0, posicio)
+            document.write(fraseMitad);
+
+            //2a manera
+            /* for (let f = 0; f < frase.length / 2; f++) {
+                document.write(frase.charAt(f));
+            } */
+            document.write('<br><br>');
+        }
+
+        function mitad2(frase) {
+            document.write('Mitad inicial de la frase, con slice:');
+            document.write(frase.slice(frase.length / 2) + '<br><br>');
+        }
+
+        function ultimoCaracter(frase) {
+            document.write('Ultimo carácter:');
+            //1a manera            
+            document.write(frase.charAt(frase.length - 1));
+            //2a manera            
+            //document.write(frase.slice(-1));
+            //3a manera            
+            //document.write(frase.slice(frase.slice(frase.length - 1)));
+
+            document.write('<br><br>');
+        }
+
+        function imprimirInverso(frase) {
+            document.write('En forma inversa:');
+            //let fraseInversa= frase.split("").revert().join("");
+
+            for (let f = 0; f < frase.length; f++) {
+                document.write(frase.charAt(frase.length - f - 1));
+            }
+            document.write('<br><br>');
+        }
+
+        function imprimirConGuion(frase) {
+            document.write('Separados por guión:');
+            //let fraseInversa= frase.split("").join("-");
+
+            for (let f = 0; f < frase.length; f++) {
+                document.write(frase.charAt(f) + '-');
+            }
+            document.write('<br><br>');
+        }
+
+        function cantidadVocales(frase) {
+            let cant = 0;
+            patro=/[aeiou]/ig;
+
+            let n = patro.exec(frase);
+            document.write("Numero Vocals: " + n);
+            console.log("Primera vocal trobada=" + n);
+
+            tevocals=patro.test(frase);            
+            console.log("té vocales= " + tevocals);
+
+            numVocals=frase.match(patro);
+            console.log("te vocals + match= "+ numVocals.length);
+
+            for (let f = 0; f < frase.length; f++) {
+                if (frase.charAt(f).toLowerCase() == 'a' ||
+                    frase.charAt(f).toLowerCase() == 'e' ||
+                    frase.charAt(f).toLowerCase() == 'i' ||
+                    frase.charAt(f).toLowerCase() == 'o' ||
+                    frase.charAt(f).toLowerCase() == 'u')
+                    {
+                    cant++;
+                }                 
+            } 
+            console.log("te vocals amb for= "+ cant);
+        }
+
+
+        let frase = "Aixo es una frase Aixo es una frases";
+        document.write(frase);
+        document.write('<br><br>');
+        mitad(frase);
+        mitad2(frase);
+        ultimoCaracter(frase);
+        imprimirInverso(frase);
+        imprimirConGuion(frase);
+        cantidadVocales(frase);        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Exercici 01</title>
+</head>
+
+<body>
+    <script>
+        /* 1. Fes un programa que donat un número de DNI, calculi si la lletra és correcta. 
+         Escriure primer l'algoritme en paper */
+
+        /* Para calcular la letra del documento, se aplica la siguiente fórmula: Dividimos el número completo del DNI entre 23, 
+        sin sacar decimales. Utilizamos el resto de la división para calcular la letra. Dicho resto estará siempre entre 0 y 22 Variables declaration */
+
+        function dniEsCorrecte(dni) {
+            const lettersList = "TRWAGMYFPDXBNJZSQVHLCKE";
+            console.log(`DNI introduit: ${dni}`);
+
+            // 00000000 El numero d'un DNI comença en la posició 0 i acaba a la 8
+            let dniNumber = parseInt(dni.substring(0, 8));
+            console.log(`Comprovem si estem agafant bé el numero: ${dniNumber}`);
+
+            // 00000000X The letter in a DNI is in position 8 (starting by 0)
+            let dnilletra=dni.charAt(8);
+            console.log(`Comprovem si estem agafant bé la lletra: ${dnilletra}`);
+
+            // mòdul del número del DNI respecte 23
+            // Busquem la lletra corresponent a lettersList
+            let  lletraCorrecta = lettersList.charAt(dniNumber % 23)
+            console.log(`La lletra donat aquest numero hauria de ser: ${lletraCorrecta}`);
+
+            if ( lletraCorrecta.toLowerCase()== dnilletra.toLowerCase()) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        var dnicorrecte=false;
+
+        dnicorrecte= dniEsCorrecte("87654321X");
+        console.log("87654321X es" + dnicorrecte);
+        dnicorrecte= dniEsCorrecte("87654321M");
+        console.log("87654321M es" + dnicorrecte);
+
+
+    </script>
+</body>
+
+</html>

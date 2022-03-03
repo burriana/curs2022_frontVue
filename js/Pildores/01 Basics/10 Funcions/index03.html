@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcions</title>
+</head>
+
+<body>
+    <script>
+       
+       //3. Programa en JavaScript on se li passen dos valors i retorna el menor.
+       function compararValors(val1, val2) {
+            //1ª manera de fer-ho: Ternari, JS modern            
+            let menor;
+            menor = val1 < val2 ? val1 : val2;
+            return menor;
+
+            //2ª manera de fer-ho: If, JS classic
+ /*         let menor;
+            if (val1<val2){
+                menor=val1;
+            } else {
+                menor=val2
+            } 
+            return menor;
+            */
+
+            //3ª manera de fer-ho: If, JS classic
+ /*            if (val1<val2){
+                return val1;
+            } else {
+                return val2
+            } 
+ */
+            //4ª manera. Amb l'objecte Math.
+        /*     menor = Math.min(val1,val2)
+            return menor; */
+
+        }
+
+        var menor1; 
+        menor1=compararValors(5,1);
+        document.write("El valor més petit es" + menor1 );
+        document.write("El valor més petit es" + compararValors(5,1) );
+
+        menor1=compararValors(8,9);
+        document.write("El valor més petit es" + menor1 );
+
+        menor1=compararValors(400,25);
+        document.write("El valor més petit es" + menor1 );
+
+        if (menor<5){
+            console.log("fer algo");
+        }
+    </script>
+
+</body>
+
+</html>
