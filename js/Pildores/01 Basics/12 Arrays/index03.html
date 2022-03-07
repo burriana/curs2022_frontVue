@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="./js/carrito.js"></script>
+    <script>
+        //a)	Mostrar els productes de més de 300€          
+        console.log("-----------")      
+        console.log("Exercici a)")
+        console.log("-----------")
+
+        console.log("** Metode tradicional:")
+        //For tradicional
+        for (let i = 0; i < carrito.length; i++) {
+            if (carrito[i].precio > 300) {
+                console.log("Producte: " + carrito[i].nombre + " - Preu: " + carrito[i].precio + "€")
+            }            
+        }
+
+        console.log("** Javascript modern:")
+        // For each
+        carrito.forEach(producto => {
+            if (producto.precio > 300) {
+                console.log("Producte: " + producto.nombre + " - Preu: " + producto.precio + "€")
+            }
+        })
+
+        console.log("** Amb mètodes filter:")
+        let nuevoCarrito = carrito.filter(function (producto) {
+                return producto > 300;            
+        });              
+
+        console.log("** Amb mètodes filter y arrow function:")
+        console.log(carrito.filter(producto => producto.precio > 300));
+                
+
+        //b)	Mostrar el total a pagar del carrito. (hem de sumar tots els preus.)       
+        //podemos hacer lo mismo pero con el .reduce
+        console.log("-----------")
+        console.log("Exercici b)")
+        console.log("-----------")
+
+        console.log("** Amb for each:")
+        //Com el calcul es facil, tb ho podriem fer amb un simple Foreach
+        let total = 0;
+        carrito.forEach(producto => total += producto.precio);
+        console.log(total);
+    
+        console.log("** Amb reduce y function:")    
+        //OJO Inicializamos a total = 0.    
+        let resultado = carrito.reduce(function (total, producto){    
+            total =total + producto.precio         
+            return total
+        },0) 
+        console.log(resultado);
+        
+        console.log("** Amb reduce y Amb arrow function:")     
+        //OJO Inicializamos a total = 0.
+        resultado = carrito.reduce((total, producto) => total + producto.precio, 0);       
+        console.log(resultado);
+        
+
+        /* C) Obtenir nous carritos, tenint en compte les següents condicions:
+            a.	Carrito con Productos con precio > 400
+            b.	Carrito con Productos con el nombre ‘Celular'
+            c.	Carrito con todos los excepto ‘Laptop
+        */
+        console.log("-----------")
+        console.log("Exercici c)")
+        console.log("-----------")
+                  
+  
+        console.log("** 1) Amb filter i Amb arrow function:");
+        console.log("producto.precio > 400");
+        let carrito1 = carrito.filter(producto => producto.precio > 400);
+        console.table(carrito1);
+
+        console.log("** 2) producto.nombre === 'Celular'");
+        let carrito2 = carrito.filter(producto => producto.nombre === 'Celular'); // Traerte el celular        
+        console.table(carrito2);
+
+        console.log("** 3) producto.nombre !== 'Laptop'");
+        let carrito3 = carrito.filter(producto => producto.nombre !== 'Laptop'); // Todos menos la laptop
+        console.table(carrito3);
+
+        // OJO: Amb el find únicament ens creará un array amb el primer resultado true...      
+        let carrito4 = carrito.find(producto => producto.nombre === 'Bocinas');
+        console.log(carrito4);
+
+        //D) Comprova que en el carrito no hi hagi algun producte sense preu = 0
+        console.log("-----------")
+        console.log("Exercici d)")
+        console.log("-----------")
+        resultado = carrito.every(producto => producto.precio == 0);
+        console.log(resultado);
+    </script>
+</body>
+
+</html>

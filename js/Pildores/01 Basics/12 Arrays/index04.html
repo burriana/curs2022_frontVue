@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.Crea una funció que rebi un array de 5 noms com a paràmetre i retoni l’índex del nom més llarg (el programa “principal” haurà d’imprimir per consola el nom
+       
+        
+        function nomMesLlarg(a) {
+            let e;
+            let i;
+            for (e = 0; e < 4; e++) { //bubble sort
+                for (i = 0; i < 5 - e - 1; i++) {
+                    if (a[i].length > a[i + 1].length) {
+                        temp = a[i];
+                        a[i] = a[i + 1];
+                        a[i + 1] = temp;
+                    }
+                }
+            }
+            let e2;
+            for (e2 = 0; e2 <= 4; e2++) {
+                if (a[4] == arrayNoms[e2]) {
+                    break;
+                }
+            }
+            return e2;
+        }
+
+        let arrayNoms;
+        arrayNoms = ["ana", "olga", "peret", "sebastian", "pi"];        
+        indexNomMesLlarg = nomMesLlarg(arrayNoms);        
+        console.log(arrayNoms[indexNomMesLlarg]);
+        
+        arrayNoms = ["ana", "olga", "Juan Antonio", "sebastian", "pi"];
+        indexNomMesLlarg = nomMesLlarg(arrayNoms);
+        console.log(arrayNoms[indexNomMesLlarg]);
+
+    </script>
+</body>
+
+</html>

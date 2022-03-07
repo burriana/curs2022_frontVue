@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //2.	Donat un array de números, el programa ha de mostrar per pantalla,  l’array amb els nombres ordenats de menor a major
+
+        var array = [1, 8, 10, 15, 19, 25, 5];
+        array.sort();
+        console.table(array);
+
+        //Veiem que el metode sort converteix els elements en un string        
+        //array.forEach(function(currentValue, index, arr), thisValue)        
+        //Javascript fa servir l'algoritme Burbuja
+         array.sort(function (a, b) {
+            return a - b    
+        });
+        console.table(array) 
+
+    /* algortimo burbuja: Es el más simple de los algoritmos para ordenar. Intercambia repetidamente elementos adyacentes para organizarlos de forma ascendente, el algoritmo tiene un "wall" o muro que representa la última posición que se va a comparar, el muro sigue moviéndose de izquierda a derecha, reduciendo el tamaño de comparación hasta que se ordena la lista completa.
+    https://content.breatheco.de/es/lesson/sorting-algorithms-explanied-in-javascript 
+    */
+    </script>
+</body>
+
+</html>

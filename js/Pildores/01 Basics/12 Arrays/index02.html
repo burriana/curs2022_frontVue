@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.2.	Crea una funció que rebi un array de 5 noms com a paràmetre i retorni un nou array amb el número de caràcters de cada nom.
+        
+        function nomMesLlarg(a) {
+            let newArray = [];
+
+            for (let i = 0; i < a.length ; i++) { 
+                nom= a[i];
+                newArray.push(nom.length)
+            }
+            return newArray;
+        }
+
+        let arrayNoms;
+        let nouArray;
+
+        arrayNoms = ["ana", "olga", "peret", "sebastian", "pi"];        
+        console.log(console.table(arrayNoms));
+        nouArray = nomMesLlarg(arrayNoms);        
+        console.log(console.table(nouArray));
+        
+        arrayNoms = ["ana", "olga", "Juan Antonio", "sebastian", "pi", "maria", "luis"];
+        console.log(console.table(arrayNoms));
+        nouArray = nomMesLlarg(arrayNoms);
+        console.log(console.table(nouArray));
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+              // 01 . Funció que rebi dos nombres i retorni un array amb tots els numeros compresos entre ells. 
+        // El programa principal ha de mostrar aquest array per consola.
+        console.log(nombresEntre(15,2 ));
+        console.log(nombresEntre(1,20 ));
+        console.log(nombresEntre(10,10 ));
+
+        function nombresEntre(x, y) {
+            let nombres = [];            
+            let inici = x;
+            let final =y;
+
+            if (x > y) {
+                inici = y;
+                final = x;
+            }
+
+            // el + 1, el fiquem pq únicament volem els numeros compressos, no inclosos el primer i ultim
+            for (let i = inici + 1; i < final; i++) {
+                nombres.push(i);
+            }
+            return nombres;
+        }
+
+ 
+        
+    </script>
+</body>
+
+</html>
