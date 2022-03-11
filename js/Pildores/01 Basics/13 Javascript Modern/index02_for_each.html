@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // Sense arrow function --> Solament necessitem tenir més d'una sentencia dins del Foreach
+        function caracter1(noms) {
+            let caract = [];
+            noms.forEach(function (nom) {
+                caract.push(nom.length)
+            })
+            return caract
+        }
+
+        // Arrow function --> Solament necessitem tenir més d'una sentencia dins del Foreach
+        function caracter2(noms) {
+            let caract = [];
+            noms.forEach(nom => caract.push(nom.length))
+
+            return caract;
+        }
+
+        //Arrow function -->  PEr si necessitem tenir més d'una sentencia dins del Foreach
+        function caracter3(noms) {
+            let caract = [];
+            noms.forEach((nom) => {
+                caract.push(nom.length);
+                console.log(nom);
+            });
+            return caract;
+        }
+
+        // Amb Javascript estandar
+        function caracter4(noms) {
+            let caract = [];
+            for (let i = 0; i < noms.length; i++) {
+                caract.push(noms[i].length)
+            }
+            return caract;
+        }
+
+        //Arrow function -->  PEr si necessitem tenir l'index al for each
+        function caracter5(noms) {
+            let caract = [];
+            noms.forEach((nom, index) => {
+                caract.push(nom.length);
+                console.log(`${index}: ${nom}`)
+            });
+            return caract;
+        }
+
+        // crides, ESCENARI
+        let noms = ["marta", "marc", "martina", "matilde", "lisa", "Mª Jose"];
+        let total = 0;
+
+        //Diferents maneres de fer-ho
+        console.log("*****  For each, amb callback de funcio estandard");
+        total = caracter1(noms);
+        console.log(total);
+        console.log("\n");
+
+        console.log("*****  For each, amb callback de arrow function amb 1 sentencia");
+        total = caracter2(noms);
+        console.log(total);
+        console.log("\n");
+
+        console.log("*****  For each, amb callback de arrow function amb més d'una sentencia");
+        total = caracter3(noms);
+        console.log(total);
+        console.log("\n");
+
+        console.log("*****  Amb For estandar");
+        total = caracter4(noms);
+        console.log(total);
+        console.log("\n");
+
+        console.log("***** 5) Afegint index al For each");
+        total = caracter5(noms);
+        console.log(total);
+        console.log("\n");
+    </script>
+
+
+</body>
+
+</html>
