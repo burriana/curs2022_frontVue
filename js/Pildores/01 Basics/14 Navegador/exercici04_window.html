@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Exercici 01</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // 1. Obre una finestra amb l’adreça www.uoc.edu al navegador. 
+        // La finestra s’ha de mostrar a una pestanya diferent a la del document 
+        // on escrius el codi
+        function obrirPestanya() {
+            var novaPestanya = window.open("https://www.uoc.edu", "_blank");
+        }
+        // 2. Obre una finestra amb l’adreça www.uoc.edu al navegador. 
+        // La finestra s’ha de mostrar a una pestanya diferent a la del document
+        // on escrius el codi i s’ha de poder tancar des de l’opener.
+        function obrirFinestra() {
+            var novaFinestra = window.open("https://www.uoc.edu", "", "width=300, height=300");
+        }
+
+        // 3. Obre una finestra buida o amb l'adreça www.escoladeltreball.org. 
+        // Aquesta finestra ha de tenir una amplada de 300 píxels i una altura de
+        // 200 píxels. Mou la finestra aleatòriament un número finit de vegades i 
+        // finalment, tanca-la.
+        function obrirFinestraBuida() {
+            // No funciona amb Firefox, pero si amb Chromium
+            var finestra = window.open("", "_blank", "width=300, height=200");
+            // Moure la finestra
+            var movimentAleatori = setInterval(function () {
+                var posX = Math.floor((Math.random() * 1920) + 1);
+                var posY = Math.floor((Math.random() * 1080) + 1);
+                finestra.moveTo(posX, posY);
+            }, 2000);
+        }
+
+        // 4. Obre una finestra que no disposi de barra d’adreces ni de barra d’eines.
+        function obrirSenseAdrecaIEines() {
+            var finestra = window.open("https://www.uoc.edu", "",
+                "width=500, height=500, directories=no,titlebar=no,scrollbars=no,status=no");
+        }
+
+        // 5. Obre una finestra nova amb les següents característiques: amplada 800 píxels,
+        // altura 500 píxels, que no es pugui modificar la mida de la finestra un cop oberta.
+
+        // Nota: Amb L’estàndard actual de JavaScript ja no és possible crear una finestra 
+        // que no sigui ‘resizable’, a no ser que s’utilitzi Internet Explorer.
+        function senseModificarFinestra() {
+            var finestra = window.open("https://www.uoc.edu", "", "width=800, height=500, resizable=0");
+        }
+
+        // 6. Crea un document que pregunti a l’usuari si desitja obrir una nova finestra i
+        // actuï conseqüentment.
+        var userPregunta = window.confirm("Vols obrir una nova finestra?");
+
+        function obrirFinestraUser() {
+            if (userPregunta) {
+                ventana = window.open("https://www.uoc.edu", "", "height=500,width=800,resizable=false");
+            }
+        }
+        obrirFinestraUser();
+
+    </script>
+</body>
+
+</html>
