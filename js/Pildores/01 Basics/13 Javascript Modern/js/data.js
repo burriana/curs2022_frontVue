@@ -2009,8 +2009,3 @@ const movies = [
     score: 8
   }
 ];
-
-/* export default films; */
-if (typeof module !== 'undefined') {
-  module.exports = movies;
-}
