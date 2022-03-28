@@ -10,7 +10,7 @@ function descargarClientes() {
             } else {
                 reject('No se pudo aplicar el descuento');                
             }            
-        }, 3000);
+        }, 2000);
 
     });
 }
@@ -19,7 +19,7 @@ function descargarClientes() {
 async function ejecutar() {
     try {
         // Deten la ejecución hasta que sea ejecutado...
-        await descargarClientes(); 
+        respuesta = await descargarClientes(); 
         console.log(respuesta);
     } catch (error) {
         console.log(error)
